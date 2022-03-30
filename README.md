@@ -1,4 +1,4 @@
-# Little-Linux-Assistant
+# Little Linux Assistant
 
 **Little Linux Assistant**, which we will call "*LLA*" for the rest of this doc, is a small program meant to help you get small tasks done quickly and helpfully. It is also meant to be light and easy to run on all major GNU/Linux distributions.  
 
@@ -9,15 +9,15 @@ This is a Python program that can currently:
 - Pull up the news for you from a few different sources that you can select. 
 - Pull up the weather for your locale. 
 
-LLA aims to be a fun little friend that helps you get stuff done.
+LLA aims to be a fun little friend that helps you get stuff done!
 
-*More functionality will be coming to LLA over time.* 
+> *More functionality will be coming to LLA over time.* 
 
 ### Using Little Linux Assistant
 
 When you first download LLA, make sure you have everything you need to properly run it by installing its dependencies - and handily, there is a **installer.sh** file right here waiting for you. 
 
-Hold up, though - you'll have to make it executable first to be able to run it: 
+Hold up, though, Mr. ExcitedFace - you'll have to make it executable first to be able to run it: 
 
 `chmod +x installer.sh`
 
