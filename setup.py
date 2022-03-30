@@ -18,7 +18,7 @@ def getName():
     print(a)
     userName = input(b)
     print(f'It is really nice to meet you, {userName}.')
-    sh.system(f'echo "userName = '{userName}'" >> library/sources.py')
+    sh.system(f'echo "userName = '{userName}'" >> sources.py')
 # function for getting location (In ZIP code form) 
 def getZIP():
     weath = "I can get the weather and news for you."
@@ -32,7 +32,7 @@ def getZIP():
     correct = input(yorn)
     if (correct == "Yes"):
         print("Saving your information for you.")
-        sh.system(f'echo "zip_code = {zip_code}" >> library/sources.py')
+        sh.system(f'echo "zip_code = {zip_code}" >> sources.py')
         print(f'ZIP code saved as {zip_code}.')
     else:
         print("Please input a valid zip code.")
@@ -46,7 +46,7 @@ def name_buddy():
     asstName = input(three)
     print(f'I think I like the name {asstName}. Thanks!')
     print("Saving my new information...")
-    sh.system(f'echo "asstName = '{asstName}'" >> library/sources.py')
+    sh.system(f'echo "asstName = '{asstName}'" >> sources.py')
     print("Information saved.")
 # function for "launch or leave." if you want to leave, you can, or you can launch into the main menu
 def lol():
