@@ -1,8 +1,6 @@
 ''' Little GNU/Linux Assistant Setup
     
-    This little file sets up the Little Assistant, creates a sources file for other files to reference.
-
-    '''
+    This little file sets up the Little Assistant, creates a sources file for other files to reference.'''
 import os as sh
 x = "Welcome to your new assistant." 
 y = "Let's get you all setup."

@@ -7,6 +7,7 @@
 		- Pull up the news from you from a choice of a few different sources.
 		- Pull up the weather for you by your location. 
 	Soon, I would like to add more functionality, such as mini-games, RSS reading, and more. ''' 
+# needed imports
 import os as sh 	# shell 
 from datetime import datetime	# for displaying time
 from sources import * 	# import our global vars
@@ -16,8 +17,8 @@ from library.weather import getWeather	# import the weather library
 	The user will be able to select:
 	- opening up the weather
 	- opening up the news
-	- and more
----Variables---'''
+	- and more '''
+#---Variables---
 title = f'cowsay "{asstName} GNU/Linux Assistant"' 
 u1 = f'Hi, {userName}!'
 u2 = "What would you like to do today?"
@@ -43,9 +44,9 @@ def currTime():	# displays the current time
 	current = f'The current time is {timeNow}.'
 	print(current)
 # program begins here
-cowTitle()
+cowTitle()	# title display
 sleepy()
-currTime() 
+currTime()  # time display 
 sleepy()
 print(u1)
 sleepy()
@@ -81,4 +82,3 @@ else:
 	err = "Invalid option selected. Exiting." 
 	print(err) 
 	exit()
-
