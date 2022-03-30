@@ -11,7 +11,7 @@ updater=$(sudo apt update -y)
 materials=$(sudo apt install links2 python3 cowsay -y)
 sleep1=$(sleep 1) 
 notify1=$(notify-send "Little Linux Assistant" "Assistant dependencies installed.")
-notify2=$(notify-send "Little Linux Assistant" "Depencendies installation cancelled.")
+notify2=$(notify-send "Little Linux Assistant" "Dependencies installation cancelled.")
 cancelling="Okay. Not installing." 
 cancelling2="Invalid key pressed. Exiting."
 ######################################
