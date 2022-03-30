@@ -10,25 +10,29 @@ done_installing="Needed stuff for Assistant installed."
 updater=$(sudo apt update -y) 
 materials=$(sudo apt install links2 python3 cowsay -y)
 sleep1=$(sleep 1) 
+notify1=$(notify-send "Little Linux Assistant" "Assistant dependencies installed.")
+notify2=$(notify-send "Little Linux Assistant" "Depencendies installation cancelled.")
+cancelling="Okay. Not installing." 
+cancelling2="Invalid key pressed. Exiting."
 ######################################
 # functions
 ######################################
 function installingStuff() {
 	echo($installing) 
 	$updater && $materials
-	echo($done_installing) 
+	echo($done_installing) & $notify1 
 	$sleep1
 	echo "Exiting..." 
 	$sleep1
 	exit
 }
 function xxExit() {
-	echo "Okay. Not installing." 
+	echo($cancelling) & $notify2
 	$sleep1
 	exit
 }
 function inValid() {
-	echo "Invalid key pressed. Exiting." 
+	echo($cancelling2) & $notify2 
 	$sleep1
 	exit 
 }
