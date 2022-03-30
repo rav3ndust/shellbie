@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # install stuff for Little Assistant
 ######################################
 # vars
