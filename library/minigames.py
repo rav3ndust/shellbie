@@ -30,7 +30,7 @@ def guess_the_number():
         gcStatus = "Current Game Counter Status" # var for displaying current point status
         def countChecker():
             if (gameCounter == 3):
-                print("Your Game Counter has went over 3.")
+                print("Your Game Counter has went over 3. You lose.")
                 sleeping_machines()
                 print("Exiting...")
                 sleeping_machines()
