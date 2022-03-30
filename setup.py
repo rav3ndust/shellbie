@@ -14,8 +14,10 @@ def getName():
     a = "Let's get to know each other."
     b = "What is your name? Type it below:\n"
     print(a)
+    sleepSys()
     userName = input(b)
     print(f'It is really nice to meet you, {userName}.')
+    sleepSys()
     # open the 'sources.py' file and write the new var to it. 
     srcFile = open("sources.py", "a") 
     srcFile.write(f'userName = "{userName}"\n')
@@ -27,17 +29,22 @@ def getZIP():
     acc = "To display accurate results, I'll need your location to help me."
     zipq = "Can you type your ZIP code below?\n"
     print(weath)
+    sleepSys()
     print(acc)
+    sleepSys()
     zip_code = input(zipq)
     print(f'You said your zip code is {zip_code}. Is this correct?')
+    sleepSys()
     yorn = "Please type Yes or No below:\n"
     correct = input(yorn)
     if (correct == "Yes"):
         print("Saving your information for you.")
+        sleepSys()
         # open the 'sources.py' file and write the new var to it.
         srcFile = open("sources.py", "a")
         srcFile.write(f'zip_code = "{zip_code}"\n')
         srcFile.close()
+        sleepSys()
         print(f'ZIP code saved as {zip_code}.')
     else:
         print("Please input a valid zip code.")
@@ -47,14 +54,19 @@ def name_buddy():
     two = "You can name me whatever you'd like." 
     three = "Please type in my new name below:\n"
     print(one)
+    sleepSys()
     print(two)
+    sleepSys()
     asstName = input(three)
     print(f'I think I like the name {asstName}. Thanks!')
+    sleepSys()
     print("Saving my new information...")
+    sleepSys()
     # open the 'sources.py' file and write the new var to it.
     srcFile = open('sources.py', 'a')
     srcFile.write(f'asstName = "{asstName}"\n')
     srcFile.close()
+    sleepSys()
     print("Information saved.")
 # function for "launch or leave." if you want to leave, you can, or you can launch into the main menu
 def lol():
@@ -66,7 +78,8 @@ def lol():
     def mm(): # internal function for launching into the main menu 
         menuLaunch = 'python3 mainMenu.py'
         sh.system(menuLaunch) 
-    print(lol1) 
+    print(lol1)
+    sleepSys() 
     for lolz in lol_opts:
         print(lolz)
     lol_opts[0], lol_opts[1] = 1, 2
@@ -78,14 +91,18 @@ def lol():
         mm()
     elif (pick == lol_opts[1]):
         print(xIt) 
+        sleepSys()
         exit()
     else:
         inval = "Invalid option chosen."
-        print(inval) 
-        print(xIt) 
+        print(inval)
+        sleepSys() 
+        print(xIt)
+        sleepSys() 
         exit()
 # progam begins here
 print(x)
+sleepSys()
 print(y)
 def autogen():  # quick function for creating the sources.py file for population
     sh.system(createFile) 
@@ -97,10 +114,15 @@ def copySrcToLib(): # quick function for copying the source file to library
     copyFile = 'cp sources.py library' 
     sh.system(copyFile)
 autogen() # generate the sources.py file
+sleepSys()
 getName() # fill in the userName variable
+sleepSys()
 name_buddy() # fill in the asstName variable
+sleepSys()
 getZIP() # fill in the zip_code variable
 copySrcToLib() # send a copy of the sources.py file to the library folder for reference
 print("I think I got everything I need.")
+sleepSys()
 print("Thanks!")
+sleepSys()
 lol() # launch or leave the program
