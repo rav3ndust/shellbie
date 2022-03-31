@@ -25,3 +25,15 @@ It is important to keep this development flow in mind so we don't accidentally b
 One of the most important things we are working on in this project is the development of handy libraries for LLA to use. Currently, these include *News*, *Weather*, and *Minigames*, where we can pull functions from the libraries and use them in the main parts of the program. 
 
 We will keep developing and implementing new libraries for this project to take advantage of as time goes on. 
+
+### Future Ideas: 
+
+These are just some ideas that I think we can probably work into the project as time goes on. These would make the project a lot more accessible to people, and maybe that much more helpful. 
+
+I am adding them to this list and then going back over and prioritizing them from top to bottom - more helpful things on top, less important things on bottom. 
+
+**_Future Ideas List for LLA_**: 
+
+- The GUI port using either *PySimpleGUI* or *GTK*. 
+- Add an ability for the user to open applications on their computer.
+- Add an ability to perform web searches from LLA. 
