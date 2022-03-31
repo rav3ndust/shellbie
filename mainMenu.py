@@ -34,7 +34,7 @@ def cX():		# cleans up, exits
 	cx1 = "Cleaning up and exiting."
 	print(cx1)  
 	sh.system('clear && cd')
-	sh.system('notify-send "Helper" "Exiting the program."')
+	sh.system('notify-send "Little Linux Assistant" "Exiting the program."')
 	exit()
 def cowTitle():	# uses cowsay to display a title 
 	sh.system(title)
