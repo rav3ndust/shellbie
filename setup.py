@@ -37,7 +37,7 @@ def getZIP():
     sleepSys()
     yorn = "Please type Yes or No below:\n"
     correct = input(yorn)
-    if (correct == "Yes"):
+    if (correct == "Yes") or (correct == "yes"):
         print("Saving your information for you.")
         sleepSys()
         # open the 'sources.py' file and write the new var to it.

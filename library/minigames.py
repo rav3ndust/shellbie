@@ -64,13 +64,13 @@ def guess_the_number():
     ##########################################################
     # def game_logic:
          # statements
-    if (gameStart == "Yes"):
+    if (gameStart == "Yes") or (gameStart == "yes"):
         # insert logic here later. 
         # we will probably need a function for the actual gameplay. 
         # that function would be invoked here, since the user said "yes" to playing.
         gameOn = "Alright, let's get started!" 
         print(gameOn)  
-    elif (gameStart == "No"):
+    elif (gameStart == "No") or (gameStart == "no"):
         gs1, gs2 = "Okay, no problem.", "Exiting..." 
         print(gs1)
         sleeping_machines()
