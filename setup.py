@@ -121,7 +121,7 @@ name_buddy() # fill in the asstName variable
 sleepSys()
 getZIP() # fill in the zip_code variable
 copySrcToLib() # send a copy of the sources.py file to the library folder for reference
-print("I think I got everything I need.")
+print("I think I have everything I need.")
 sleepSys()
 print("Thanks!")
 sleepSys()
