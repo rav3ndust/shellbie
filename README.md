@@ -1,6 +1,6 @@
 # Shellbie
 
-![image](https://user-images.githubusercontent.com/35274771/202140958-717da1f0-36c3-4e08-b3a7-2dcea3969a30.png)
+![image](https://user-images.githubusercontent.com/35274771/202141256-06e59281-7b1e-42d2-9c86-0490c5a6457f.png)
 
 **Shellbie** is a small program meant to help you get small tasks done quickly and helpfully. It is also meant to be light and easy to run on all major GNU/Linux distributions.
 
