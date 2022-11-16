@@ -3,12 +3,14 @@ import urllib.request as web
 import os as sh 
 # this is our list of minimal news sources. we can add/remove as needed. 
 news_src_list = ["1 - 68k.news", "2 - eink.links"]
-# getNews() pipes the news in as html which we need to strip out - getsNews_links2 might be the better option for now
+# - - - functions - - - 
 def sleep(seconds):
     # halts sys ops X seconds
     # usage example: sleep(2)
     sh.system(seconds)
 def getNews():
+    # getNews() pipes the news in as html which we need to strip out
+    # getsNews_links2 might be the better option for now
     print("So, you want to read the news?")
     print("Which of these sources would you prefer?")
     for news in news_src_list:
