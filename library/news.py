@@ -4,6 +4,10 @@ import os as sh
 # this is our list of minimal news sources. we can add/remove as needed. 
 news_src_list = ["1 - 68k.news", "2 - eink.links"]
 # getNews() pipes the news in as html which we need to strip out - getsNews_links2 might be the better option for now
+def sleep(seconds):
+    # halts sys ops X seconds
+    # usage example: sleep(2)
+    sh.system(seconds)
 def getNews():
     print("So, you want to read the news?")
     print("Which of these sources would you prefer?")
@@ -41,19 +45,17 @@ def getNews_links2():
     if (digit == news_src_list[0]):
         def browser_display_1():
             opening = "Opening up 68k.news..."
-            opening_links = 'links2 -g http://68k.news' 
-            sleepySystem = 'sleep 2' 
+            opening_links = 'links2 -g http://68k.news'  
             print(opening) 
-            sh.system(sleepySystem)
+            sleep(2)
             sh.system(opening_links) 
         browser_display_1()
     elif (digit == news_src_list[1]):
         def browser_display_2():
             opening2 = "Opening up eink.link..." 
-            opening_links2 = 'links2 -g https://eink.link' 
-            sleepySystem2 = 'sleep 2' 
+            opening_links2 = 'links2 -g https://eink.link'  
             print(opening2) 
-            sh.system(sleepySystem2)
+            sleep(2)
             sh.system(opening_links2)
         browser_display_2()
     else:
