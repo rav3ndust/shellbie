@@ -7,7 +7,7 @@ news_src_list = ["1 - 68k.news", "2 - eink.links"]
 def sleep(seconds):
     # halts sys ops X seconds
     # usage example: sleep(2)
-    sh.system(seconds)
+    sh.system(f'sleep {seconds}')
 def getNews():
     # getNews() pipes the news in as html which we need to strip out
     # getsNews_links2 might be the better option for now
