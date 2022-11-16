@@ -9,7 +9,7 @@ This is a Python program that can currently:
 - Pull up the news for you from a few different sources that you can select. 
 - Pull up the weather for your locale. 
 
-LLA aims to be a fun little friend that helps you get stuff done!
+Shellbie aims to be a fun little friend that helps you get stuff done!
 
 > *More functionality will be coming to Shellbie over time.*
 
