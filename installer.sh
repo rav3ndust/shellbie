@@ -25,6 +25,7 @@ make_Shellbie_executable () {
     shellbie_exec_location="/usr/bin/shellbie"
     echo "Making Shellbie executable globally..."
     sleep 1
+    chmod +x $shellbie
     sudo cp $shellbie $shellbie_exec_location
     echo "Done." && sleep 1
 }
