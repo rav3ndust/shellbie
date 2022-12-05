@@ -1,54 +1,43 @@
 #!/bin/bash
-# install stuff for Little Assistant
-######################################
-# vars
-######################################
-first=$(echo "Would you like to install Assistant dependencies?") 
-installing=$(echo "Installing needed stuff for Assistant...")
-done_installing=$(echo "Needed stuff for Assistant installed.") 
-updater=$(sudo apt update -y) 
-materials=$(sudo apt install links2 python3 cowsay libnotify-bin -y)
-sleep1=$(sleep 1) 
-notify1=$(notify-send "Little Linux Assistant" "Assistant dependencies installed.")
-notify2=$(notify-send "Little Linux Assistant" "Dependencies installation cancelled.")
-cancelling=$(echo "Okay. Not installing.") 
-cancelling2=$(echo "Invalid key pressed. Exiting.")
-all_ops=$(echo "All operations finished.") 
-######################################
-# functions
-######################################
-function installingStuff() {
-	$installing 
-	$updater && $materials
-	$done_installing & $notify1 
-	$sleep1
-	$all_ops
-	$sleep1 
-	echo "Exiting..." 
-	$sleep1
-	exit
+# Shellbie installer.
+# Currently assumes an Arch Linux-based system.
+SCRIPT="Shellbie Installation Helper"
+PKGS="mpg123 python python-pip links2 cowsay"
+GTTS="gtts"
+_error () {
+    ERR_MSG="Oops, something went wrong. Please check logs."
+    ERR_MSG2="Now exiting the Shellbie installation script - please correct errors and try again."
+    echo "$ERR_MSG"
+    sleep 1
+    echo "$ERR_MSG2"
+    sleep 1 && exit
 }
-function xxExit() {
-	$cancelling & $notify2
-	$sleep1
-	exit
+download_pkgs () {
+    # downloads the required packages for Shellbie
+    echo "Installing needed packages for Shellbie..."
+    sudo pacman -Sy $PKGS --noconfirm
+    pip install $GTTS
+    echo "Packages installed successfully."
+    sleep 1
 }
-function invalid_Input() {
-	$cancelling2 & $notify2 
-	$sleep1
-	exit 
+make_Shellbie_executable () {
+    shellbie="shellbie.py"
+    shellbie_exec_location="/usr/bin/shellbie"
+    echo "Making Shellbie executable globally..."
+    sleep 1
+    sudo cp $shellbie $shellbie_exec_location
+    echo "Done." && sleep 1
 }
-######################
-# script begins:
-######################
-$first 
-read -p "Type 'Yes' if you want to install, or 'No' if you don't: " installYN
-if [[ $installYN == "Yes" ]] || [[ $installYN == "yes" ]]
-then
-	installingStuff
-elif [[ $installYN == "No" ]] || [[ $installYN == "no" ]] 
-then 
-	xxExit
-else 
-	invalid_Input
-fi 
+send_notification () {
+    n_title="$SCRIPT"
+    n_desc="Shellbie installation has finished."
+    notify-send "$n_title" "$n_desc"
+}
+# Script begins here.
+echo "$SCRIPT"
+sleep 1
+download_pkgs || _error
+make_Shellbie_executable || _error
+send_notification
+echo "Script finished. You can now run Shellbie by invoking 'shellbie' in your terminal."
+sleep 1 && exit
