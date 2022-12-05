@@ -31,7 +31,11 @@ def greet():
     speak(f'Hi, {system_user}! My name is {asst}, running on {system_hostname}.')
     speak(f'The current date and time is {current_date}.')
     speak("What can I do for you today?")
-
+    '''
+    TODO: 
+    - user should be able to make a selection and shellbie will act accordingly.
+    - for example, if a user asks for the weather, shellbie should fetch it and speak it aloud for the relevant area.
+    '''
 # program start
 greet()
 give_options()
