@@ -21,12 +21,16 @@ download_pkgs () {
     sleep 1
 }
 make_Shellbie_executable () {
+    run_shellbie="python shellbie/shellbie.py"
     shellbie="shellbie.py"
+    shellbie_launch_script="shellbieproxy.sh"
     shellbie_exec_location="/usr/bin/shellbie"
     echo "Making Shellbie executable globally..."
     sleep 1
-    chmod +x $shellbie
-    sudo cp $shellbie $shellbie_exec_location
+    touch $shellbie_launch_script
+    echo "$run_shellbie" >> $shellbie_launch_script
+    chmod +x $shellbie_launch_script
+    sudo cp $shellbie_launch_script $shellbie_exec_location
     echo "Done." && sleep 1
 }
 send_notification () {
